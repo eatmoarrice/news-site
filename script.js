@@ -1,14 +1,18 @@
 let newList = [];
 let totalArticles = 20;
+let realTotal = 0;
 let currentArticles = 0;
+let category = "";
 let sources = {};
+let query = "tech";
 let tempName = "";
 const apiKey = "a51f0be7ca2b4684ba396ce9e924c893";
 const loadNews = async() => {
-    let url = `http://newsapi.org/v2/everything?q=tech&sortBy=popularity&pageSize=${totalArticles}&apiKey=${apiKey}`;
+    let url = `http://newsapi.org/v2/top-headlines?q=${query}&category=${category}&pageSize=${totalArticles}&apiKey=${apiKey}`;
     let data = await fetch(url);
     let result = await data.json();
     newList = result.articles;
+    sources = {};
     showTotalSources(newList)
     render(newList);
     renderSources();
@@ -17,17 +21,19 @@ const loadNews = async() => {
 
 
 const render = (list) => {
+    realTotal = 0;
     currentArticles = 0;
     let newsHTML = list.map((item, i) => {
+        realTotal++;
         if (sources[item.source.name].show) {
-            currentArticles += 1;
+            currentArticles++;
             return `
             <div class="news row">
                 <div class="contentArea col-8">
                     <div class="title">${item.title}</div>
                     <div class="source">${item.source.name}</div>
                     <div class="publishDate">${moment(item.publishedAt).fromNow()}</div>
-                    <a class="seeMore" href="${item.url}">See More</a>
+                    <a class="seeMore" href="${item.url}" target="_blank">See More</a>
                 </div>
                 <div class="imgArea col-4">
                     <img class="pic img-fluid" src="${item.urlToImage}">
@@ -39,7 +45,7 @@ const render = (list) => {
     }).join('');
         document.getElementById("newsArea").innerHTML = newsHTML;
         document.getElementById("currentArticles").innerHTML = currentArticles;
-        document.getElementById("totalArticles").innerHTML = totalArticles;
+        document.getElementById("totalArticles").innerHTML = realTotal;
         // console.log(currentArticles)
         
 }
@@ -101,4 +107,22 @@ let isChecked = () => {
     }
     console.log(sources)
     render(newList)
+}
+
+let changeQuery = () => {
+    query = document.getElementById("queryinput").value;
+     newList = [];
+    totalArticles = 20;
+    currentArticles = 0;
+    sources = {};
+    loadNews();
+}
+
+let changeCategory = () => {
+    category = document.getElementById("cat").value;
+    newList = [];
+    totalArticles = 20;
+    currentArticles = 0;
+    sources = {};
+    loadNews();
 }
