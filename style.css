@@ -43,3 +43,15 @@
 li {
     list-style: none;
 }
+
+/* .left-panel {
+    background-color: peachpuff;
+}
+
+.right-panel {
+    background-color: peachpuff;
+} */
+
+.container {
+    max-width: 80vw;
+}

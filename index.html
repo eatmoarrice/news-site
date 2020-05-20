@@ -10,30 +10,28 @@
 </head>
 <body>
     <h1 class="text-center sitetitle">Vinh's Tech News</h1>
-    <div class="row">
-    <div class="col-2   left-panel">
-        <div id="panel-upper">Showing <span id="currentArticles"></span> of <span id="totalArticles"></span></div>
-        <div>
-            <ul id="sourcelist">
-                <li>
-                    <input type="checkbox" id="vehicle1" name="vehicle1">
-                    <label for="vehicle1"> Source: number</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="vehicle1" name="vehicle1">
-                    <label for="vehicle1"> Source: number</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="vehicle1" name="vehicle1">
-                    <label for="vehicle1"> Source: number</label>
-                </li>
-            </ul>
+    <div class="row container mx-auto">
+        <div class="col-2 left-panel">
+            <div id="panel-upper">Showing <span id="currentArticles"></span> of <span id="totalArticles"></span></div>
+            <div>
+                <ul id="sourcelist">
+                    
+                    <!-- <li>
+                        <input type="checkbox" id="vehicle1" name="vehicle1">
+                        <label for="vehicle1"> Source: number</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="vehicle1" name="vehicle1">
+                        <label for="vehicle1"> Source: number</label>
+                    </li> -->
+                </ul>
+            </div>
         </div>
+        <div class="col-8" id="newsArea">
+        </div>
+        <div class="col-2 right-panel">Some stuff here later</div>
     </div>
-    <div class="col-6" id="newsArea">
-    </div>
-</div>
-    <div>
+    <div class="row justify-content-center">
         <button class="loadmore" onclick="loadMore(20)">Load More</button>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
