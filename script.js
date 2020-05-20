@@ -8,7 +8,7 @@ let query = "tech";
 let tempName = "";
 const apiKey = "a51f0be7ca2b4684ba396ce9e924c893";
 const loadNews = async() => {
-    let url = `http://newsapi.org/v2/top-headlines?q=${query}&category=${category}&pageSize=${totalArticles}&apiKey=${apiKey}`;
+    let url = `https://newsapi.org/v2/top-headlines?q=${query}&category=${category}&pageSize=${totalArticles}&apiKey=${apiKey}`;
     let data = await fetch(url);
     let result = await data.json();
     newList = result.articles;
@@ -29,14 +29,14 @@ const render = (list) => {
             currentArticles++;
             return `
             <div class="news row">
-                <div class="contentArea col-8">
+                <div class="contentArea col-12 col-md-6 col-lg-8">
                     <div class="title">${item.title}</div>
                     <div class="source">${item.source.name}</div>
                     <div class="publishDate">${moment(item.publishedAt).fromNow()}</div>
                     <a class="seeMore" href="${item.url}" target="_blank">See More</a>
                 </div>
-                <div class="imgArea col-4">
-                    <img class="pic img-fluid" src="${item.urlToImage}">
+                <div class="imgArea col-12 col-md-6 col-lg-4">
+                    <img class="pic" src="${item.urlToImage}">
                 </div>
             </div> 
             `
@@ -65,7 +65,7 @@ let renderSources = () => {
         sourceHTML += `
     <li>
                     <input type="checkbox" onchange="isChecked()" id="source${i}" name="source${i}">
-                    <label for="source${i}"> ${key}: ${value.repeat}</label>
+                    <label for="source${i}"> ${key} (${value.repeat})</label>
                 </li>`
     }
     document.getElementById("sourcelist").innerHTML = sourceHTML;

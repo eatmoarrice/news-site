@@ -9,35 +9,28 @@
     <title>Vinh's News</title>
 </head>
 <body>
-    <h1 class="text-center sitetitle">Vinh's Tech News</h1>
+    <h1 class="text-center sitetitle">Vinh's Random News</h1>
     <div class="text-center searchbox">
         <input type="text" id="queryinput">
       <button onclick="changeQuery()">Search</button>
     </div>
     <div class="row container mx-auto">
-        <div class="col-2 d-none d-md-block left-panel">
+        <div class="col-md-3 d-none d-md-block left-panel">
             <div id="panel-upper">Showing <span id="currentArticles"></span> of <span id="totalArticles"></span></div>
             <div>
                 <ul id="sourcelist">
-                    
-                    <!-- <li>
-                        <input type="checkbox" id="vehicle1" name="vehicle1">
-                        <label for="vehicle1"> Source: number</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="vehicle1" name="vehicle1">
-                        <label for="vehicle1"> Source: number</label>
-                    </li> -->
                 </ul>
             </div>
         </div>
         <div class="col-12 col-md-8" id="newsArea">
         </div>
-        <div class="col-2 d-none d-md-block right-panel">
+        <div class="col-md-1 d-none d-md-block right-panel">
             <label for="cat">Category:</label>
             <select name="cat" id="cat" onchange="changeCategory()">
             <option value="">------</option>
             <option value="health">Health</option>
+            <option value="general">General</option>
+            <option value="sports">Sports</option>
             <option value="entertainment">Entertainment</option>
             <option value="technology">Technology</option>
             <option value="science">Science</option>

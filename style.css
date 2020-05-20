@@ -3,7 +3,7 @@
     font-weight: 700;
 }
 .title {
-    font-size:  x-large;
+    font-size:  18px;
     font-weight: bold;
 }
 
@@ -27,21 +27,21 @@
 .imgArea {
     /* float: right; */
     width:200px;
-    height:200px;
+    height:170px;
     text-align:center;
-    /* overflow:hidden;     */
+    overflow:hidden;    
 }
 
 /* .contentArea {
     float: left;
 } */
  .pic {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 300px;
+    max-height: 300px;
     /* min-width:150px;
     max-width:none; 
     height:150px; */
-    /* margin:0 -100%;  */
+    margin:0 -100%; 
 } 
 
 li {
