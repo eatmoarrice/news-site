@@ -1,0 +1,45 @@
+.sitetitle {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.title {
+    font-size:  x-large;
+    font-weight: bold;
+}
+
+.news {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap; */
+    border: 1px solid orange;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: peachpuff;
+    margin-bottom: 20px;
+    max-width: 1000px;
+}
+
+.imgArea {
+    /* float: right; */
+    width:200px;
+    height:200px;
+    text-align:center;
+    overflow:hidden;    
+}
+
+/* .contentArea {
+    float: left;
+} */
+ .pic {
+    
+    min-width:200px;
+    max-width:none; 
+    height:200px;
+    margin:0 -100%; 
+} 
+
+li {
+    list-style: none;
+}
