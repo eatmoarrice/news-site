@@ -1,10 +1,18 @@
 .sitetitle {
     text-transform: uppercase;
     font-weight: 700;
+    font-family: 'Noticia Text', serif;
 }
 .title {
-    font-size:  18px;
+    font-size:  20px;
     font-weight: bold;
+}
+
+#panel-upper {
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid gray;
 }
 
 .searchbox {
@@ -15,13 +23,14 @@
     align-items: center;
     justify-content: space-between;
     flex-flow: row wrap; */
-    border: 1px solid rgb(139, 136, 172);
+    border: none;
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(234, 240, 255, 0.651);
+    background-color: rgba(224, 224, 224, 0.41);
     margin-bottom: 20px;
     max-width: 1000px;
+    border-radius: 10px;
 }
 
 .imgArea {
@@ -65,4 +74,12 @@ li {
       display: flex;
       flex-direction: column;
     }
+  }
+
+  body {
+      padding: 10px;
+  }
+
+  .source, .publishDate, .seeMore {
+      font-size: 14px;
   }
