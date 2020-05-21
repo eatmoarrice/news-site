@@ -35,7 +35,7 @@ const render = (list) => {
                     <div class="publishDate">${moment(item.publishedAt).fromNow()}</div>
                     <a class="seeMore" href="${item.url}" target="_blank">See More</a>
                 </div>
-                <div class="imgArea col-12 col-md-6 col-lg-4">
+                <div class="imgArea col-12 col-md-6 col-lg-4 mx-auto d-block">
                     <img class="pic" src="${item.urlToImage}">
                 </div>
             </div> 
